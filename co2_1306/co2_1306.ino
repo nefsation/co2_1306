@@ -90,11 +90,11 @@ for (int x = 0;x<10;x++){                     //add samples together
   display.setTextColor(WHITE);                //set text color
   display.setCursor(0,0);                     //set cursor
   display.println("CO2 Level");               //print title
-  display.println(" ");                       //skip a line
+  //display.println(" ");                       //skip a line
   display.print(co2ppm);                      //print co2 ppm
   display.print(" PPM");                      //print units
   grafX = map(co2ppm,0,1000,0,127);           //map value to screen width
-  display.fillRect(0, 52, grafX, 10, WHITE);  //print graph 400min 1000max
+  display.fillRect(0, 52, grafX, 1, WHITE);  //print graph 400min 1000max
   display.display();                          //show the buffer
   if(co2ppm>999){                             //if co2 ppm > 1000
     digitalWrite(led,HIGH);                   //turn on led
